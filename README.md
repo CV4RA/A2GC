@@ -14,12 +14,10 @@ A PyTorch implementation of A²GC (Asymmetric Aggregation with Geometric Constra
 
 - [Installation](#installation)
 - [Quick Start](#quick-start)
-- [Dataset Preparation](#dataset-preparation)
+- [Dataset](#dataset)
 - [Training](#training)
-- [Evaluation](#evaluation)
 - [Results](#results)
 - [Visualization](#visualization)
-- [Citation](#citation)
 
 ## 🔧 Installation
 
@@ -68,7 +66,7 @@ python main.py
 
 Modify `main.py` to customize training parameters, backbone architecture, and aggregator configuration.
 
-## 📦 Dataset Preparation
+## 📦 Dataset
 
 ### Supported Datasets
 
