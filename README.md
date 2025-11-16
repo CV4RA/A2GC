@@ -172,6 +172,9 @@ python tools/visualize_feature_maps.py \
     --out ./viz_features
 ```
 
+![alt text](image.png)
+
+
 ## 🏗️ Architecture
 
 ### Model Components
