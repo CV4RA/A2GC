@@ -4,7 +4,7 @@ A PyTorch implementation of A²GC (Asymmetric Aggregation with Geometric Constra
 
 ## 🚀 Features
 
-- **Multiple Backbone Support**: DINOv2 (ViT-B/14, ViT-L/14, ViT-G/14), DINOv3 (ViT-S/16), and ResNet
+- **Multiple Backbone Support**: DINOv2 (ViT-B/14, ViT-L/14, ViT-G/14), and ResNet
 - **Asymmetric Aggregation with Geometric Constraints**: A²GC aggregator for robust feature aggregation
 - **Comprehensive Evaluation**: Support for multiple VPR benchmarks (Pittsburgh, MSLS, Nordland, SPED, SF-XL)
 - **Flexible Training**: PyTorch Lightning-based training with various loss functions and optimizers
