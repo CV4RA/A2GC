@@ -24,7 +24,7 @@ if __name__ == '__main__':
             'return_token': True,
             'norm_layer': True,
         },
-        agg_arch='A2GC',
+        agg_arch='ASYOT',
         agg_config={
             'num_channels': 768,
             'num_clusters': 64,

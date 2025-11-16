@@ -149,7 +149,7 @@ def load_model(ckpt_path, device, backbone_arch='dinov2_vits14'):
             'return_token': True,
             'norm_layer': True,
         },
-        agg_arch='SALAD',
+        agg_arch='ASYOT',
         agg_config={
             'num_channels': 768,  # 如果你的聚合头用的是 1536，这里要改成 1536
             'num_clusters': 64,
