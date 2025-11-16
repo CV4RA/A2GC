@@ -1,0 +1,18 @@
+name: A2GC
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch=2.1.0
+  - torchvision=0.16.0
+  - faiss-cpu              # CPU 版更通用
+  - pip
+  - pip:
+      - pandas==2.1.3
+      - prettytable==3.9.0
+      - pytorch-lightning==2.1.2
+      - pytorch-metric-learning==2.3.0
+      - torchmetrics==1.2.0
+      # xformers 在 macOS/Windows 上常缺预编译包，如非必须可先不装
