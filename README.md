@@ -133,8 +133,6 @@ The default training uses GSV-Cities dataset. Ensure the dataset is properly set
 | Pair-VPR (RAL 2025) | 95.4/97.5/98.0 | — | 95.4/97.3/97.7 | 81.7/90.2/91.3 |
 | **A²GC (Ours)** | **95.6/99.3/99.8** | **97.3/99.3/99.7** | **93.6/97.5/97.9** | **80.6/90.9/92.5** |
 
-*Results with DINOv2-ViT-B/14 backbone at 588×588 input resolution*
-
 ### Impact of Input Resolution
 
 | Input Size | Pitts30k (R@1/5/10) | MSLS-val (R@1/5/10) |
@@ -180,47 +178,20 @@ python tools/visualize_feature_maps.py \
 
 ### Model Components
 
-1. **Backbone**: Feature extraction (DINOv2/DINOv3/ResNet)
-2. **Aggregator**: Feature aggregation (ASYOT for A²GC/MixVPR/ConvAP)
-3. **Loss Function**: Metric learning loss (MultiSimilarityLoss, TripletMarginLoss, etc.)
+1. **Backbone**: Feature extraction (DINOv2/ResNet)
+2. **Aggregator**: Feature aggregation (ASYOT for A²GC)
+3. **Loss Function**: Metric learning loss (MultiSimilarityLoss)
 
 ### A²GC Aggregator
 
 The Asymmetric Aggregation with Geometric Constraints (A²GC) aggregator uses asymmetric optimal transport with geometric constraints to aggregate spatial features, providing robust place descriptors that are invariant to viewpoint changes and partial occlusions.
 
-## 📝 Citation
-
-If you use this code in your research, please cite:
-
-```bibtex
-@article{a2gc2024,
-  title={A²GC: Asymmetric Aggregation with Geometric Constraints for Locally Aggregated Descriptors},
-  author={Your Name},
-  journal={Conference/Journal Name},
-  year={2024}
-}
-```
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - [DINOv2](https://github.com/facebookresearch/dinov2) for the vision transformer backbone
-- [DINOv3](https://github.com/facebookresearch/dinov3) for the latest vision transformer
 - [CosPlace](https://github.com/gmberton/CosPlace) for dataset preparation utilities
 - [PyTorch Lightning](https://www.pytorchlightning.ai/) for the training framework
+- [salad](https://github.com/serizba/salad) for the code support.
 
-## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📧 Contact
-
-For questions or issues, please open an issue on GitHub or contact [your-email@example.com].
-
----
-
-**Note**: This is a research implementation. For production use, additional optimizations and testing may be required.
 
