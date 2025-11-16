@@ -119,10 +119,19 @@ The default training uses GSV-Cities dataset. Ensure the dataset is properly set
 
 ### Performance on Standard Benchmarks
 
-| Dataset | R@1 | R@5 | R@10 |
-|---------|-----|-----|------|
-| Pitts30k | 96.7 | 99.8 | 100.0 |
-| MSLS-val | 96.4 | 97.9 | 98.6 |
+| Method | Pitts30k (R@1/5/10) | Pitts250k-test (R@1/5/10) | MSLS-val (R@1/5/10) | MSLS-challenge (R@1/5/10) |
+|--------|---------------------|---------------------------|---------------------|---------------------------|
+| NetVLAD (CVPR 2016) | 81.9/91.2/93.7 | 90.5/96.2/97.4 | 53.1/66.5/71.1 | 35.1/47.4/51.7 |
+| CosPlace (CVPR 2022) | 88.5/94.5/95.2 | 92.4/97.2/98.1 | 82.8/89.7/92.0 | 61.4/72.0/76.6 |
+| MixVPR (WACV 2023) | 91.5/95.5/96.3 | 94.6/98.3/99.0 | 88.2/93.1/94.3 | 64.0/75.9/80.6 |
+| R²Former (CVPR 2023) | 91.1/95.2/96.3 | 93.2/97.5/98.3 | 89.7/95.0/96.2 | 73.0/85.9/88.8 |
+| EigenPlaces (ICCV 2023) | 92.5/96.8/97.6 | 94.1/98.0/98.7 | 89.1/93.8/95.0 | 67.4/77.1/81.7 |
+| SelaVPR (ICLR 2024) | 92.8/96.8/97.7 | 95.7/98.8/99.2 | 90.8/96.4/97.2 | 73.5/87.5/90.6 |
+| CricaVPR (CVPR 2024) | 94.9/97.3/98.2 | 95.6/98.9/99.5 | 90.0/95.4/96.4 | 69.0/82.1/85.7 |
+| SALAD (CVPR 2024) | 92.4/96.3/97.4 | 95.1/98.5/99.1 | 92.2/96.2/97.0 | 75.0/88.8/91.3 |
+| FoL (AAAI 2025) | 94.5/97.4/98.2 | 97.0/99.2/99.5 | 93.5/96.9/97.6 | 80.0/90.9/93.0 |
+| Pair-VPR (RAL 2025) | 95.4/97.5/98.0 | — | 95.4/97.3/97.7 | 81.7/90.2/91.3 |
+| **A²GC (Ours)** | **95.6/99.3/99.8** | **97.3/99.3/99.7** | **93.6/97.5/97.9** | **80.6/90.9/92.5** |
 
 *Results with DINOv2-ViT-B/14 backbone at 588×588 input resolution*
 
@@ -157,7 +166,7 @@ This generates:
 - `similarity_matrix.png`: Full similarity matrix visualization
 - `feature_heatmap_comparison.png`: Feature activation heatmaps
 
-### Feature Map Visualization
+### Visualization
 
 ```bash
 python tools/visualize_feature_maps.py \
