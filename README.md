@@ -1,6 +1,6 @@
 # A²GC: Asymmetric Aggregation with Geometric Constraints for Locally Aggregated Descriptors
 
-A PyTorch implementation of A^²GC (Asymmetric Aggregation with Geometric Constraints) for Visual Place Recognition (VPR), featuring support for DINOv2 and DINOv3 backbones.
+A PyTorch implementation of A$^²$GC (Asymmetric Aggregation with Geometric Constraints) for Visual Place Recognition (VPR), featuring support for DINOv2 and DINOv3 backbones.
 
 ## 🚀 Features
 
