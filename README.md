@@ -1,6 +1,6 @@
 # A²GC: Asymmetric Aggregation with Geometric Constraints for Locally Aggregated Descriptors
 
-A PyTorch implementation of A²GC (Asymmetric Aggregation with Geometric Constraints) for Visual Place Recognition (VPR), featuring support for DINOv2 and DINOv3 backbones.
+A PyTorch implementation of A²GC (Asymmetric Aggregation with Geometric Constraints) for Visual Place Recognition (VPR), featuring support for DINOv2 backbones.
 
 ## 🚀 Features
 
@@ -107,71 +107,13 @@ datasets/
 
 Edit `main.py` to configure:
 
-- **Backbone**: `backbone_arch` (e.g., `'dinov2_vitb14'`, `'dinov3_vits16'`)
-- **Aggregator**: `agg_arch` (e.g., `'ASYOT'` for A²GC, `'MixVPR'`, `'ConvAP'`)
+- **Backbone**: `backbone_arch` (e.g., `'dinov2_vitb14'`)
+- **Aggregator**: `agg_arch` (e.g., `'ASYOT'` for A²GC)
 - **Training parameters**: learning rate, batch size, optimizer, etc.
-
-### Example: Training with DINOv3
-
-```python
-model = VPRModel(
-    backbone_arch='dinov3_vits16',
-    backbone_config={
-        'num_trainable_blocks': 4,
-        'return_token': True,
-        'norm_layer': True,
-    },
-    agg_arch='ASYOT',
-    agg_config={
-        'num_channels': 384,  # DINOv3 ViT-S/16 has 384 channels
-        'num_clusters': 64,
-        'cluster_dim': 128,
-        'token_dim': 256,
-    },
-    lr=6e-5,
-    optimizer='adamw',
-    # ... other parameters
-)
-```
 
 ### Training on GSV-Cities
 
 The default training uses GSV-Cities dataset. Ensure the dataset is properly set up in `data/GSVCities/`.
-
-## 📊 Evaluation
-
-### Standard Evaluation
-
-```bash
-python eval.py \
-    --ckpt_path weights/a2gc.ckpt \
-    --backbone_arch dinov2_vitb14 \
-    --val_datasets pitts30k_test pitts250k_test msls_val nordland sped \
-    --faiss_gpu \
-    --batch_size 256
-```
-
-### Evaluation without Groundtruth
-
-For datasets without groundtruth, use `evaluation.py`:
-
-```bash
-python evaluation.py \
-    --ckpt_path weights/a2gc.ckpt \
-    --dataset sfxl_test \
-    --backbone_arch dinov2_vitb14 \
-    --num_channels 768 \
-    --output_dir ./evaluation_results \
-    --faiss_gpu
-```
-
-### Supported Datasets
-
-- `pitts30k_test`, `pitts250k_test`
-- `msls`, `msls_test`
-- `nordland`
-- `sped`
-- `sfxl_test`
 
 ## 📈 Results
 
