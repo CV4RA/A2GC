@@ -10,15 +10,6 @@ A PyTorch implementation of A²GC (Asymmetric Aggregation with Geometric Constra
 - **Flexible Training**: PyTorch Lightning-based training with various loss functions and optimizers
 - **Visualization Tools**: Feature matching and heatmap visualization utilities
 
-## 📋 Table of Contents
-
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Dataset](#dataset)
-- [Training](#training)
-- [Results](#results)
-- [Visualization](#visualization)
-
 ## 🔧 Installation
 
 ### Prerequisites
